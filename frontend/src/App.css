@@ -1,0 +1,520 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f8fafc;
+  color: #172554;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 8%;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1d4ed8;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.nav-links a,
+.nav-links button {
+  color: #334155 !important;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav-links a:hover,
+.nav-links button:hover,
+.nav-links a:focus-visible,
+.nav-links button:focus-visible {
+  color: #1d4ed8 !important;
+}
+
+/* Buttons */
+.login-button,
+.primary-button,
+.secondary-button {
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-button,
+.primary-button {
+  background: #1d4ed8;
+  color: #ffffff;
+  border: 1px solid #1d4ed8;
+}
+
+.login-button:hover,
+.primary-button:hover {
+  background: #1e40af;
+}
+
+.secondary-button {
+  background: #ffffff;
+  color: #1d4ed8;
+  border: 1px solid #cbd5e1;
+}
+
+.secondary-button:hover {
+  background: #eff6ff;
+}
+
+/* Home page */
+.hero {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 24px 60px;
+  text-align: center;
+}
+
+.tagline {
+  color: #1d4ed8;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  color: #0f172a;
+  font-size: clamp(36px, 5vw, 58px);
+  line-height: 1.15;
+  margin-bottom: 22px;
+}
+
+.hero h1 span {
+  color: #2563eb;
+}
+
+.description {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #64748b;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 75px;
+  text-align: left;
+}
+
+.feature-card {
+  background: #ffffff;
+  padding: 28px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.feature-card h3 {
+  color: #0f172a;
+  font-size: 19px;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.feature-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #dbeafe;
+  color: #1d4ed8;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+/* General headings */
+h1,
+h2,
+h3 {
+  color: #1e293b;
+}
+
+h1 span,
+h2 span,
+h3 span {
+  color: #1e293b;
+}
+
+/* Skills page */
+.skills-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 45px 24px;
+}
+
+.skills-page h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.skills-page p {
+  color: #64748b;
+  line-height: 1.7;
+}
+
+/* Projects page */
+.projects-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 45px 24px;
+}
+
+.projects-page h1 {
+  color: #0f172a;
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.projects-page > p {
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+/* Project form */
+.project-form {
+  width: 100%;
+  max-width: 680px;
+  margin: 25px auto 35px;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+.project-form h2 {
+  color: #0f172a;
+  font-size: 23px;
+  margin-bottom: 22px;
+}
+
+.project-form label {
+  display: block;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 18px 0 8px;
+}
+
+.project-form input,
+.project-form textarea {
+  display: block;
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #172554;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.project-form input::placeholder,
+.project-form textarea::placeholder {
+  color: #94a3b8;
+}
+
+.project-form input:focus,
+.project-form textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.project-form textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.project-form button {
+  margin-top: 24px;
+  padding: 13px 22px;
+  background: #1d4ed8;
+  color: #ffffff;
+  border: none;
+  border-radius: 9px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.project-form button:hover {
+  background: #1e40af;
+}
+
+/* Project cards */
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.project-card {
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+  overflow-wrap: anywhere;
+}
+
+.project-card h2 {
+  color: #0f172a;
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.project-card p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.project-card a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+.project-empty {
+  padding: 28px;
+  margin: 24px 0;
+  background: #ffffff;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+  color: #64748b;
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* Admin page */
+.admin,
+.admin h1,
+.admin h2,
+.admin h3,
+.admin p,
+.admin label,
+.admin span,
+.admin strong,
+.admin td,
+.admin th {
+  color: #1e293b;
+}
+
+.admin button {
+  cursor: pointer;
+}
+
+.admin .primary-button,
+.admin .login-button {
+  color: #ffffff;
+}
+
+.admin .secondary-button {
+  color: #1d4ed8;
+}
+
+/* Authentication pages */
+.auth-container {
+  min-height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 430px;
+  padding: 35px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+}
+
+.auth-card h1 {
+  margin-bottom: 10px;
+  color: #0f172a;
+  font-size: 28px;
+}
+
+.auth-description {
+  color: #64748b;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.auth-card label {
+  display: block;
+  margin: 18px 0 8px;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 12px;
+  color: #172554;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+
+.auth-card input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.auth-submit {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.auth-switch {
+  margin-top: 22px;
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.auth-switch button,
+.back-button {
+  background: none;
+  border: none;
+  color: #1d4ed8;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.back-button {
+  display: block;
+  margin: 20px auto 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 24px;
+  color: #64748b;
+  font-size: 13px;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 20px 5%;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .hero {
+    padding-top: 55px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+  }
+
+  .hero-buttons {
+    flex-wrap: wrap;
+  }
+
+  .auth-card {
+    padding: 25px;
+  }
+
+  .projects-page,
+  .skills-page {
+    padding: 32px 18px;
+  }
+
+  .projects-page h1 {
+    font-size: 28px;
+  }
+
+  .project-form {
+    padding: 22px;
+  }
+
+  .projects-list {
+    grid-template-columns: 1fr;
+  }
+}
