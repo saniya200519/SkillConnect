@@ -427,6 +427,8 @@ async function handleSendConnectionRequest(receiverId) {
 
 
 
+
+
 async function loadPosts() {
   const token = localStorage.getItem('token')
 
@@ -439,8 +441,32 @@ async function loadPosts() {
   setPostsError('')
 
   try {
+    let userId = currentUserId
+
+    if (!userId) {
+      const profileResponse = await fetch(
+        `${API_BASE_URL}/api/users/me`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      )
+
+      if (!profileResponse.ok) {
+        throw new Error(
+          `Could not load profile: ${profileResponse.status}`
+        )
+      }
+
+      const profileData = await profileResponse.json()
+      setProfile(profileData)
+      setCurrentUserId(profileData.id)
+      userId = profileData.id
+    }
+
     const response = await fetch(
-      `${API_BASE_URL}/api/posts/user/5`,
+      `${API_BASE_URL}/api/posts/user/${userId}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -460,6 +486,7 @@ async function loadPosts() {
     setPostsError(error.message)
   }
 }
+
 
 async function loadPostInteractions(postList) {
   const token = localStorage.getItem('token')
